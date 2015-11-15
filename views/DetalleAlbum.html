@@ -1,0 +1,10 @@
+<article>
+    <header>
+        <h4>{{ album.title }}</h4>
+    </header>
+    <img ng-src="img/{{ album.image }}" ng-if="album.image" alt="Imagen" width="128" class="img-rounded" />
+    <div><label>Tracks: </label></div>
+    <div ng-repeat="track in album.tracklist">
+        {{ track }} <a ng-href="{{ getYouTubeLink(album.band.name, track) }}"> Video Youtube</a>
+    </div>
+</article>

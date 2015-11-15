@@ -1,0 +1,18 @@
+<div>
+    <!-- Establecemos un formulario con los filtros -->
+    <br>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="filtroNombre">Nombre</label>
+            <input type="text" id="filtroNombre" ng-model="filtroPorNombre" />
+        </div>
+    </form>
+    <br>
+    <!-- Pintamos una tabla para mostrar los géneros -->
+    <table class="table">
+        <!-- Usamos una directiva "elemento-genero" por cada item de la colección -->
+        <tr ng-repeat="genero in generos | filter: {name: filtroPorNombre}"
+            elemento-genero
+            genero="genero"></tr>
+    </table>
+</div>

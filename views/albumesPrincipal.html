@@ -1,0 +1,17 @@
+<!--Barra de navegación para seleccionar la visualización entre todas los albumes o solamente los favoritos-->
+<header>
+    <h2>Albumes</h2>
+</header>
+<nav ng-controller="MainAlbumesCtrl">
+    <ul class="nav nav-tabs">
+        <li role="presentation" ng-class="{active: ('albumes.Todos' | routeSegmentStartsWith)}">
+            <a href="#/albumes/todos">Todos</a>
+        </li>
+        <li role="presentation" ng-class="{active: ('albumes.Favoritos' | routeSegmentStartsWith)}">
+            <a href="#/albumes/favoritos">Favoritos</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Contenedor de las vistas -->
+<section app-view-segment="1"></section>

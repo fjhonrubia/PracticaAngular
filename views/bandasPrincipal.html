@@ -1,0 +1,17 @@
+<!--Barra de navegación para seleccionar la visualización entre todas las bandas o solamente los favoritos-->
+<header>
+    <h2>Bandas</h2>
+</header>
+<nav>
+    <ul class="nav nav-tabs">
+        <li role="presentation" ng-class="{active: ('bandas.Todos' | routeSegmentStartsWith)}">
+            <a href="#/bandas/todos">Todos</a>
+        </li>
+        <li role="presentation" >
+            <a href="#/bandas/favoritos">Favoritos</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Contenedor de las vistas -->
+<section app-view-segment="1"></section>

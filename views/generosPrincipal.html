@@ -1,0 +1,17 @@
+<!--Barra de navegación para seleccionar la visualización entre todas los generos o solamente los favoritos-->
+<header>
+    <h2>Géneros</h2>
+</header>
+<nav ng-controller="MainGenerosCtrl">
+    <ul class="nav nav-tabs">
+        <li role="presentation" ng-class="{active: ('generos.Todos' | routeSegmentStartsWith)}">
+            <a href="#/generos/todos">Todos</a>
+        </li>
+        <li role="presentation" >
+            <a href="#/generos/favoritos">Favoritos</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Contenedor de las vistas -->
+<section app-view-segment="1"></section>

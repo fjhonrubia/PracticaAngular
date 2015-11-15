@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Jeviteca</title>
+    <!-- Cargamos los estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <!-- Cargamos los estilos de angular-loading-bar -->
+    <link rel="stylesheet" href="styles/loading-bar.min.css" />
+</head>
+<body ng-app="jeviteca">
+
+	<!-- Contenedor principal -->
+	<div class="container">
+		
+		<!--Cabecera -->
+		<header>
+			<h1>Jeviteca</h1>
+		</header>
+		
+		<!--Barra de navegación -->
+		<nav>
+            <ul class="nav nav-tabs">
+                <li role="presentation" ng-class="{active: ('albumes' | routeSegmentStartsWith)}">
+                    <a href="#/albumes">Álbumes</a>
+                </li>
+                <li role="presentation" ng-class="{active: ('bandas' | routeSegmentStartsWith)}">
+                    <a href="#/bandas">Bandas</a>
+                </li>
+				<li role="presentacion" ng-class="{active: ('generos' | routeSegmentStartsWith)}">
+					<a href="#/generos">Géneros</a>
+				</li>
+            </ul>
+        </nav>
+		
+        <!-- Contenedor de las vistas -->
+        <section app-view-segment="0"></section>
+	
+	</div>
+
+    <!-- Se carga la librería de AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<!-- Se carga la librería de Route -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+	<!-- Se carga la librería de RouteSegment -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-route-segment/1.4.0/angular-route-segment.min.js"></script>
+    <!-- Se cargan dependencias de terceros -->
+    <script src="vendor/loading-bar.min.js"></script>
+	
+	<!-- Se cargan el app.js -->
+	<script src="scripts/app.js"></script>
+
+	<!-- Barra de navegación -->
+	<!--<script src="scripts/controllers/BarraNavegacion.js"></script>-->
+
+	<!-- Controladores de los albumes -->
+	<script src="scripts/controllers/albumes.js"></script>
+	<script src="scripts/controllers/albumesPrincipal.js"></script>
+	<script src="scripts/controllers/albumesFavs.js"></script>
+	<script src="scripts/controllers/DetalleAlbum.js"></script>
+
+	<!-- Controladores de las bandas -->
+	<script src="scripts/controllers/bandas.js"></script>
+	<!--<script src="scripts/controllers/bandasPrincipal.js"></script>-->
+	<script src="scripts/controllers/bandasFavs.js"></script>
+	<script src="scripts/controllers/DetalleBanda.js"></script>
+
+	<!-- Controladores de los géneros -->
+	<script src="scripts/controllers/generos.js"></script>
+	<script src="scripts/controllers/generosPrincipal.js"></script>
+	<script src="scripts/controllers/generosFavs.js"></script>
+
+	<!-- Se cargan los servicios de la aplicación -->
+	<script src="scripts/services/AlbumesProvider.js"></script>
+	<script src="scripts/services/BandasProvider.js"></script>
+	<script src="scripts/services/GenerosProvider.js"></script>
+	
+	<!-- Directivas de los albumes -->
+	<script src="scripts/directives/ElementoAlbum.js"></script>
+	<script src="scripts/directives/ElementoAlbumFav.js"></script>
+
+	<!-- Directivas de las bandas -->
+	<script src="scripts/directives/ElementoBanda.js"></script>
+	<script src="scripts/directives/ElementoBandaFav.js"></script>
+
+	<!-- Directivas de los géneros -->
+	<script src="scripts/directives/ElementoGenero.js"></script>
+	<script src="scripts/directives/ElementoGeneroFav.js"></script>
+
+	<!-- Se cargan los filtros de la aplicación -->
+	<script src="scripts/filters/instrumentos.js"></script>
+	<script src="scripts/filters/tracks.js"></script>
+	<script src="scripts/filters/origen.js"></script>
+	<script src="scripts/filters/albumes.js"></script>
+
+
+</body>
+<html>

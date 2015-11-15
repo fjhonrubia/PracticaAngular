@@ -1,0 +1,29 @@
+<article>
+    <header>
+        <h4>{{ banda.name }}</h4>
+    </header>
+    <div>
+        <a ng-href="{{ getWikipediaLink(banda.name) }}">Enlace wikipedia</a>
+    </div>
+    <div>
+        <label>Origen: </label>
+        {{ banda.origin | Origen}}
+    </div>
+    <div>
+        <label>Componentes: </label>
+        <ul>
+            <li ng-repeat="member in banda.members">{{ member.name }}
+                <ul>
+                    <small>{{ member.instruments | Instrumentos }}</small>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <label>Albumes: </label>
+        <ul>
+            <li ng-repeat="album in banda.albums">{{ album.title }}
+            </li>
+        </ul>
+    </div>
+</article>

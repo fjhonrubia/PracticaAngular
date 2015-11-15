@@ -1,0 +1,23 @@
+<div>
+    <!-- Establecemos un formulario con los filtros -->
+    <br>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="filtroTitulo">Título</label>
+            <input type="text" id="filtroTitulo" ng-model="filtroPorTitulo" />
+            <label for="filtroBanda">Banda</label>
+            <input type="text" id="filtroBanda" ng-model="filtroPorBanda" />
+            <label for="filtroAnio">Año</label>
+            <input type="text" id="filtroAnio" ng-model="filtroPorAnio" />
+        </div>
+    </form>
+    <br>
+    <!-- Pintamos una tabla para mostrar los albumes -->
+    <table class="table">
+        <!-- Usamos una directiva "elemento-album" por cada item de la colección -->
+        <tr ng-repeat="album in albumes | filter: {title: filtroPorTitulo} | filter: { band: { name: filtroPorBanda }} | filter: {year: filtroPorAnio }"
+            elemento-album
+            album="album"
+            on-album-click="vistaDetalleAlbum(idAlbum)"></tr>
+    </table>
+</div>

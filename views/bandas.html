@@ -1,0 +1,19 @@
+<div>
+    <!-- Establecemos un formulario con los filtros -->
+    <br>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="filtroNombre">Nombre</label>
+            <input type="text" id="filtroNombre" ng-model="filtroPorNombre" />
+        </div>
+    </form>
+    <br>
+    <!-- Pintamos una tabla para mostrar las bandas -->
+    <table class="table">
+        <!-- Usamos una directiva "elemento-banda" por cada item de la colección -->
+        <tr ng-repeat="banda in bandas | filter: {name: filtroPorNombre}"
+            elemento-banda
+            banda="banda"
+            on-banda-click="vistaDetalleBanda(idBanda)"></tr>
+    </table>
+</div>
