@@ -6,7 +6,6 @@ angular.module('jeviteca').config(['$routeProvider', '$routeSegmentProvider', fu
 
 	$routeSegmentProvider.when('/albumes', 'albumes');
 	$routeSegmentProvider.segment('albumes',{
-		controller:'MainAlbumesCtrl',
 		templateUrl:'views/albumesPrincipal.html'
 	});
 
@@ -45,7 +44,6 @@ angular.module('jeviteca').config(['$routeProvider', '$routeSegmentProvider', fu
 
 	$routeSegmentProvider.when('/bandas', 'bandas');
 	$routeSegmentProvider.segment('bandas',{
-		//controller:'MainBandasCtrl',
 		templateUrl:'views/bandasPrincipal.html'
 	});
 
@@ -84,7 +82,6 @@ angular.module('jeviteca').config(['$routeProvider', '$routeSegmentProvider', fu
 
 	$routeSegmentProvider.when('/generos', 'generos');
 	$routeSegmentProvider.segment('generos',{
-		controller:'MainGenerosCtrl',
 		templateUrl:'views/generosPrincipal.html'
 	});
 
